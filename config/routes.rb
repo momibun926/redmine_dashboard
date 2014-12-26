@@ -1,11 +1,20 @@
 # Plugin's routes
 # See: http://guides.rubyonrails.org/routing.html
 
-match 'projects/:id/rdb/taskboard'        => 'rdb_taskboard#index',  :as => :rdb_taskboard
-match 'projects/:id/rdb/taskboard/move'   => 'rdb_taskboard#move',   :as => :rdb_taskboard_move
-match 'projects/:id/rdb/taskboard/update' => 'rdb_taskboard#update', :as => :rdb_taskboard_update
-match 'projects/:id/rdb/taskboard/filter' => 'rdb_taskboard#filter', :as => :rdb_taskboard_filter
+get 'projects/:id/rdb' => 'rdb_project#index'
+get 'my/rdb' => 'rdb_user#index'
 
+get '/rdb/dashboards' => 'rdb#index', as: :rdb_index
+get '/rdb/dashboards/:id/new' => 'rdb#create', as: :rdb_new
+get '/rdb/dashboards/:id(/*path)' => 'rdb#show', as: :rdb
 
-match 'projects/:id/rdb(/:board)'  => 'rdb_dashboard#index', :as => :rdb
-match 'projects/:id/dashboard'     => 'rdb_dashboard#index'
+defaults format: :json do
+  scope '/rdb/api', module: :rdb do
+    resources :boards, only: [:index, :show, :update], as: :rdb_boards do
+      resources :issues, only: [:index, :show, :update]
+
+      get 'permissions/search' => 'permissions#search'
+      resources :permissions
+    end
+  end
+end

@@ -1,0 +1,48 @@
+---
+de:
+  project_module_dashboard: Dashboards
+  permission_view_dashboards: Dashboards anzeigen
+  permission_create_dashboards: Neue Dashboards anlegen
+  rdb:
+    new:
+      default_board_name:
+        zero: Neues Dashboard
+        other: Neues Dashboard (%{count})
+    menu:
+      dashboards: Dashboards
+      my_dashboards: Meine Dashboards
+      create_new_board: Neues Dashboard erstellen
+    contextual:
+      configure: Konfigurieren
+      fullscreen: Vollbild
+      back: Zurück
+      remove: Entfernen
+    permissions:
+      read: Lesen
+      edit: Bearbeiten
+      admin: Admin
+    configure:
+      title: "%(link)s konfigurieren"
+      nav_title: Konfiguration
+      general:
+        nav: Allgemeines
+        title: Allgemeine Einstellungen
+        nav_text: Allgemeines und Zugriffskontrolle
+        description: Klicke auf ein Formularfeld um es zu bearbeiten. Es wird automatisch beim Verlassen des Eingabefeldes gespeichern.
+        general: Allgemeines
+        dashboard_name: Name
+        dashboard_name_text: Notwendig. Der Dashboard Name wird über dem Dashboard und im Dashboard Menü angezeigt.
+        dashboard_type: Typ
+        access_control: Zugriffsberechtigungen
+      sources:
+        nav: Ticket-Quellen
+        title: Ticket-Quellen und Filter
+        nav_text: Projekte und Filter
+      columns:
+        nav: Spalten
+        title: Spaltenverwaltung
+        nav_text: Spalten Layout und Anzeigeoptionen
+      swimlanes:
+        nav: Swimlanes
+        title: Swimlanes
+        nav_text: Swimlanes zum Gruppieren von Tickets

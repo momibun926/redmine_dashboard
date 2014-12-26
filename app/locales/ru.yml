@@ -1,0 +1,17 @@
+---
+ru:
+  rdb:
+    contextual:
+      configure: "Настройки"
+      fullscreen: "Полный экран"
+      back: "Назад"
+      remove: "Удалить"
+    permissions:
+      edit: "Редактировать"
+      admin: "Администратор"
+    configure:
+      title: Configure %(link)s
+      general:
+        title: "Основные настройки"
+        dashboard_name: "Имя"
+        dashboard_type: "Тип"

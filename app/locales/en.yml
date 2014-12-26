@@ -1,0 +1,63 @@
+en:
+  project_module_dashboard: Dashboards
+  permission_view_dashboards: View Dashboards
+  permission_create_dashboards: Create new Dashboards
+
+  rdb:
+    new:
+      default_board_name:
+        zero: New Board
+        other: New Board (%{count})
+
+    menu:
+      dashboards: Dashboards
+      my_dashboards: My Dashboards
+      create_new_board: Create new Dashboard
+
+    contextual:
+      configure: Configure
+      fullscreen: Fullscreen
+      back: Back
+      remove: Remove
+
+    permissions:
+      read: Read
+      edit: Edit
+      admin: Admin
+
+    configure:
+      title: Configure %(link)s
+      nav_title: Configuration
+      general:
+        nav: General
+        title: General preferences
+        nav_text: Dashboard name and access control
+        description: Click form fields to edit them. They are saved automatically when leaving the form field e.g. when clicking outside.
+        general: General
+        dashboard_name: Name
+        dashboard_name_text: Required. The Dashboard name is shown on top of the Dashboard and in the Dashboard menu.
+        dashboard_type: Type
+        access_control: Access control
+        access_control_placeholder: Search user or group to add...
+        access_control_add: Add
+        access_control_search_label: Search user or group
+        access_control_levels_label: Access level
+      sources:
+        nav: Issue sources
+        title: Issue sources and filters
+        nav_text: Source projects and issue filters
+      columns:
+        nav: Columns
+        title: Column management
+        nav_text: Column layout and view options
+      swimlanes:
+        nav: Swimlanes
+        title: Swimlanes
+        nav_text: Vertical swimlanes to group issue
+
+    errors:
+      required: can't be blank
+      already_taken: already been taken
+
+      board_name:
+        already_taken: The Dashboard name must be unique.
